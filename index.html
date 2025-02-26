@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hola Mundo en Realidad Aumentada</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+<a-scene embedded arjs="sourceType: webcam;">
+    <!-- Texto "Hola Mundo" en RA -->
+    <a-text value="Hola Mundo" position="0 0.5 -1" color="white" align="center"></a-text>
+
+    <!-- Marcador predeterminado de AR.js -->
+    <a-marker preset="hiro">
+        <!-- Puedes agregar objetos 3D aquí -->
+        <a-box position="0 0.5 0" color="blue"></a-box>
+    </a-marker>
+
+    <!-- Cámara -->
+    <a-entity camera></a-entity>
+</a-scene>
+</body>
+</html>
